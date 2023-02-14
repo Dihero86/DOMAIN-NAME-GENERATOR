@@ -7,5 +7,21 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   //write your code here
-  console.log("Hello Rigo from the console!");
+  let printweb = document.querySelector("#domainName");
+  let print = [];
+  let pronoun = ["the", "our"];
+  let adj = ["great", "big"];
+  let noun = ["jogger", "racoon"];
+  let extension = [".com", ".es", ".net", ".io"];
+
+  extension.forEach(dominio => {
+    pronoun.forEach(firstword => {
+      adj.forEach(secondworld => {
+        noun.forEach(thirdworld => {
+          print.push(` ${firstword}${secondworld}${thirdworld}${dominio}`);
+        });
+      });
+    });
+  });
+  printweb.innerHTML = print;
 };
